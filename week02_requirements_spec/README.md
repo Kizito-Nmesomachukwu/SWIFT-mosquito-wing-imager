@@ -1,4 +1,4 @@
-# Week 1: Requirements Spec v1 for a Low-Cost Mosquito Wing Imager
+# Week 2: Requirements Spec v1 for a Low-Cost Mosquito Wing Imager
 
 **Project:** SWIFT: A Low-Cost Standardised Imaging System for AI-Based Mosquito Wing Classification
 **Course:** Frugal Photonics for Global Health, WS 2026/27, Friedrich Schiller University Jena
