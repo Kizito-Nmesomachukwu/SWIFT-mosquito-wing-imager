@@ -1,7 +1,9 @@
 # Week 1: Concept Animation of the Conveyor Wing Imager
 
 **Project:** Challenge 1A, a low-cost imaging system for AI-based mosquito wing classification
+
 **Course:** Frugal Photonics for Global Health, WS 2026/27, Friedrich Schiller University Jena
+
 **Author:** Kizito Nmesomachukwu Odizilike
 
 A short video of our first prototype concept, made with a Python script in Blender. It
