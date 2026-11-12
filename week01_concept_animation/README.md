@@ -7,7 +7,7 @@
 **Author:** Kizito Nmesomachukwu Odizilike
 
 A short video of our first prototype concept, made with a Python script in Blender. It
-combines the conveyor feeder proposed by Hanna at our team meeting on 11.11.2026, Sam's
+combines the conveyor feeder proposed by Hanna at our team meeting on 10.11.2026, Sam's
 suggestion to hold the wings with PDMS, and my optical layout without a diffuser. It is meant
 as a guide for building and as a basis for deciding what to adjust or remove at our next
 meeting. The model shows the layout only; it is not to scale.
