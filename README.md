@@ -51,12 +51,19 @@ finally, with the classifier itself.
 SWIFT-mosquito-wing-imager/
 ├── README.md                          # this file
 ├── .gitignore
-└── week01_requirements_spec/          # one folder per week
+├── week01_concept_animation/          # one folder per week
+│   ├── README.md                      # what the week covers and how to run it
+│   ├── belt_anim.py                   # 3D concept model and animation (Blender, Python)
+│   ├── anim_overlay.py                # labels, captions and capture flash
+│   ├── make_video.sh                  # runs every step and writes the video
+│   ├── conveyor_imager_animation.mp4  # output
+│   └── requirements.txt               # Python dependencies of the week
+└── week02_requirements_spec/
     ├── README.md                      # physics, requirements, results of the week
     ├── w1_requirements_spec.py        # code
     ├── w1_required_resolution.png     # outputs
-    ├── requirements.txt               # Python dependencies of the week
-    └── figures/                       # hand-drawn figures W1-1 to W1-3
+    ├── requirements.txt
+    └── figures/
 ```
 
 Each week folder runs on its own: install its `requirements.txt` and run its script.
@@ -65,23 +72,25 @@ Each week folder runs on its own: install its `requirements.txt` and run its scr
 
 | Week | Dates | Folder | Focus | Status |
 |---|---|---|---|---|
-| 1 | 3 to 9 Nov 2026 | [week01_requirements_spec](week01_requirements_spec/) | Image-quality requirements derived from the classifier input | Complete |
-| 2 | 10 to 16 Nov 2026 | | Comparison of candidate architectures | Planned |
-| 3 | 17 to 23 Nov 2026 | | Optical design and bill of materials | Planned |
-| 4 | 24 to 30 Nov 2026 | | First bench prototype and resolution test | Planned |
-| 5 | 1 to 7 Dec 2026 | | Image-quality metrology pipeline | Planned |
-| 6 | 8 to 14 Dec 2026 | | Iteration 1 and printed housing | Planned |
-| 7 | 15 to 21 Dec 2026 | | Standardised acquisition software | Planned |
-| 8 | 7 to 13 Jan 2027 | | Classifier test on prototype images | Planned |
-| 9 | 14 to 20 Jan 2027 | | Iteration 2 and end-to-end pipeline | Planned |
-| 10 | 21 to 27 Jan 2027 | | Design freeze and build documentation | Planned |
+| 1 | 10 to 17 Nov 2026 | [week01_concept_animation](week01_concept_animation/) | Team organisation, optical layout and concept animation | Complete |
+| 2 | 18 to 24 Nov 2026 | [week02_requirements_spec](week02_requirements_spec/) | Image-quality requirements and redesign for mounted glass slides | In progress |
+| 3 | 25 Nov to 1 Dec 2026 | | Optical design and bill of materials | Planned |
+| 4 | 2 to 8 Dec 2026 | | First bench prototype and resolution test | Planned |
+| 5 | 9 to 15 Dec 2026 | | Image-quality metrology pipeline | Planned |
+| 6 | 16 to 22 Dec 2026 | | Iteration 1 and printed housing | Planned |
+| 7 | 6 to 12 Jan 2027 | | Standardised acquisition software | Planned |
+| 8 | 13 to 19 Jan 2027 | | Classifier test on prototype images | Planned |
+| 9 | 20 to 26 Jan 2027 | | Iteration 2 and end-to-end pipeline | Planned |
+| 10 | 27 Jan to 2 Feb 2027 | | Design freeze and build documentation | Planned |
 
 ## Key Result So Far
 
-At the wing, the optics must resolve about 90 lp/mm, which needs a numerical aperture of only
-0.060. A Raspberry Pi HQ camera at 1.37× magnification samples about 4.9× finer than that.
-Resolution is therefore not the bottleneck; standardised illumination and acquisition are.
-Details and derivations are in [Week 1](week01_requirements_spec/).
+For a single wing, the optics must resolve about 90 lp/mm at the wing, which needs a numerical
+aperture of only 0.060. A Raspberry Pi HQ camera at 1.37× magnification samples about 4.9×
+finer than that. Resolution is therefore not the bottleneck; standardised illumination and
+acquisition are. Following mentor feedback, Week 2 checks whether all wings of one mounted
+slide (about 8) fit in a single frame at this resolution. Details and derivations are in
+[Week 2](week02_requirements_spec/).
 
 ## Conventions
 
