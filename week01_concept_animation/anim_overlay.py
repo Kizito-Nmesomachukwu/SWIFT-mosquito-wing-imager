@@ -1,5 +1,8 @@
 """Adds labels, captions, the capture flash and the captured-image inset to every frame.
+
 Usage: python anim_overlay.py <in_dir> <out_dir> <anchors.json> <timeline.json>"""
+
+
 import sys, os, json, math, glob
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
@@ -8,9 +11,17 @@ T = json.load(open(TL))  # same timing as the 3D scene
 P, FALL = T["parts"], 1.4
 os.makedirs(OUT, exist_ok=True)
 FPS = 24
-S = 2  # I draw the overlay at double size, then shrink it so the edges stay smooth
+S = 2  # Draw the overlay at double size, then shrink it so the edges stay smooth
 a = {k: (v[0] * S, v[1] * S) for k, v in json.load(open(ANC)).items()}
-BOLD = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
+def find_font(name):
+    # We look in the system font folder first, then in the copy of DejaVu that ships with matplotlib
+    for folder in ("/usr/share/fonts/truetype/dejavu",):
+        if os.path.exists(os.path.join(folder, name)):
+            return os.path.join(folder, name)
+    import matplotlib
+    return os.path.join(matplotlib.get_data_path(), "fonts", "ttf", name)
+
+BOLD = find_font("DejaVuSans-Bold.ttf")
 font = ImageFont.truetype(BOLD, 15 * S)
 capfont = ImageFont.truetype(BOLD, 17 * S)
 FILL, EDGE, NAVY = (238, 244, 252), (47, 79, 127), (31, 58, 104)
