@@ -188,8 +188,7 @@ state). Each command is answered with `OK` or an error message.
 
 ## Validation
 
-- The hand calculation in Fig. W1-3 reproduces δ, $f_N$, NA, $f_c$, the MTF and the camera
-  headroom from the formulas in (i), (ii), (iii) and (v).
+- The handwritten calculation (PDF) reproduces δ, $f_N$, NA, $f_c$, the MTF and the camera headroom from the formulas in (i), (ii), (iii) and (v).
 - The MTF expression returns 1 at ν = 0 and 0 at ν = 1, as required by its definition.
 - The USAF formula is checked against two known elements: G6E4 = 90.5 lp/mm and
   G5E3 = 40.3 lp/mm.
@@ -207,10 +206,8 @@ week02_requirements_spec/
 ├── label_ctrl.py                    # labels for the 3D render
 ├── control_architecture_2d.png
 ├── control_architecture_3d.png
-├── figures/
-│   ├── W1_fig1_requirement_chain.jpg
-│   ├── W1_fig2_optical_layout.jpg
-│   └── W1_fig3_worked_calculation.jpg
+├── w2_hand_calculation.pdf
+│ 
 ├── requirements.txt
 └── README.md
 ```
