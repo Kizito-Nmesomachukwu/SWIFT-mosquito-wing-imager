@@ -1,2 +1,4 @@
 numpy
 matplotlib
+pillow
+bpy==5.2.3
