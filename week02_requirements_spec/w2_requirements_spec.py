@@ -13,8 +13,8 @@ SCRIPT PURPOSE/FUNCTION:
   At the end, we plot the required resolution against wing length.  
 
 USAGE:
-  python3 w1_requirements_spec.py
-  Prints a table and saves w1_required_resolution.png next to this file.
+  python3 w2_requirements_spec.py
+  Prints a table and saves w2_required_resolution.png next to this file.
   Needs numpy and matplotlib.
 
 References:
@@ -292,8 +292,8 @@ fig.tight_layout()
 # Save next to the script. In Jupyter or Colab there is no __file__,
 # so then we save in the current working folder instead.
 try:
-    out = Path(__file__).with_name("w1_required_resolution.png")
+    out = Path(__file__).with_name("w2_required_resolution.png")
 except NameError:
-    out = Path.cwd() / "w1_required_resolution.png"
+    out = Path.cwd() / "w2_required_resolution.png"
 fig.savefig(out)
 print(f"Saved plot to {out.name}")
