@@ -155,7 +155,7 @@ the spec.
 4. Fixed exposure, gain, white balance and illumination, since device and setting variation is
    the documented failure mode [1, 2].
 
-![Required resolution against wing length](w1_required_resolution.png)
+![Required resolution against wing length](w2_required_resolution.png)
 
 The curve is the requirement $f_N = 150/L$; the grey band is the *Ae. aegypti* range [3].
 Even the smallest wing stays well below the Pi HQ sampling limit.
@@ -199,15 +199,15 @@ state). Each command is answered with `OK` or an error message.
 
 ```
 week02_requirements_spec/
-├── w1_requirements_spec.py          # requirement calculation, table and plot
-├── w1_required_resolution.png       # output plot
+├── w2_requirements_spec.py          # requirement calculation, table and plot
+├── w2_required_resolution.png       # output plot
+├── w2_hand_calculation.pdf          # handwritten derivation
 ├── control_2d.py                    # 2D control diagram (matplotlib)
 ├── control_scene.py                 # 3D render of the control hardware (Blender)
 ├── label_ctrl.py                    # labels for the 3D render
 ├── control_architecture_2d.png
 ├── control_architecture_3d.png
-├── w2_hand_calculation.pdf
-│ 
+├── render.png                       # unlabelled 3D render
 ├── requirements.txt
 └── README.md
 ```
@@ -222,10 +222,10 @@ pip install -r requirements.txt
 
 ## Usage
 
-Requirement calculation (prints the table above and saves `w1_required_resolution.png`):
+Requirement calculation (prints the table above and saves `w2_required_resolution.png`):
 
 ```bash
-python3 w1_requirements_spec.py
+python3 w2_requirements_spec.py
 ```
 
 Control diagrams, run in this order (the 3D render takes a few minutes on a CPU):
@@ -242,7 +242,7 @@ On Google Colab, upload the scripts and run everything in one cell:
 %%bash
 pip install -q -r requirements.txt
 apt-get -qq install -y libsm6 libxi6 libxkbcommon0 libxrender1 libxxf86vm1 libgl1 > /dev/null
-python w1_requirements_spec.py
+python w2_requirements_spec.py
 python control_scene.py render.png 1800 1100 32
 python label_ctrl.py render.png control_architecture_3d.png
 python control_2d.py
